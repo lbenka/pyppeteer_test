@@ -1,5 +1,6 @@
 # pyppeteer_test
 
+https://github.com/Zenika/alpine-chrome
 ```
 docker container run -d -p 9222:9222 zenika/alpine-chrome --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222
 
@@ -11,7 +12,10 @@ chrome
 http://localhost:9222/json
 ```
 
+https://pptr.dev/#?product=Puppeteer&version=v1.9.0&show=api-puppeteerconnectoptions
+https://github.com/GoogleChrome/puppeteer
 
+https://github.com/miyakogi/pyppeteer
 ```python
 
 import pyppeteer
