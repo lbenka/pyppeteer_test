@@ -35,3 +35,22 @@ async def main():
 
 asyncio.get_event_loop().run_until_complete(main())
 ```
+
+
+requets_html
+```python
+import pyppeteer
+import asyncio
+
+import requests
+from requests_html import HTMLSession
+
+
+def connect_to_chrome(session: HTMLSession) -> None:
+
+    browser_ws = requests.get('http://localhost:9222/json').json()[0].get('webSocketDebuggerUrl')
+    session.loop = asyncio.get_event_loop()
+    session._browser = session.loop.run_until_complete(
+        pyppeteer.connect(options=dict(browserWSEndpoint=browser_ws, ignoreHTTPSErrors=True))
+    )
+```
