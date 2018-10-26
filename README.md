@@ -54,3 +54,6 @@ def connect_to_chrome(session: HTMLSession) -> None:
         pyppeteer.connect(options=dict(browserWSEndpoint=browser_ws, ignoreHTTPSErrors=True))
     )
 ```
+
+
+https://github.com/checkly/puppeteer-recorder
